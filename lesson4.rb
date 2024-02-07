@@ -1,18 +1,28 @@
-def fizz_buzz(number)
-  if number % 15 == 0
-    "FizzBuzz"
-  elsif number % 3 == 0
-    "Fizz"
-  elsif number % 5 == 0
-    "Buzz"
-  else
-    number
+class Car
+  
+  def move(direction, distance)
+    self.turn(direction)
+    self.run(distance)
+  end
+
+  def turn(direction)
+    puts "#{direction}に曲がります。"
+  end
+
+  def run(distance)
+    puts "車で#{distance}キロ走ります。"
   end
 end
 
-puts "数字を入力してください。"
 
-input = gets.to_i
 
-puts "結果は..."
-puts fizz_buzz(input)
+car = Car.new
+car.move("右", 5)
+
+class Car
+   def self.turn(direction)
+     puts "#{direction}に曲がります。"
+   end
+end
+
+Car.turn("右")
