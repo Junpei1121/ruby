@@ -4,8 +4,11 @@ class Car
   end
 end
 
-class Taxi < Car
+class Bus < Car
+  def run(distance)
+    super
+    puts "30人を乗せて、走っています。"  end
 end
 
-taxi = Taxi.new
-taxi.run(5)
+bus = Bus.new
+bus.run(5)
